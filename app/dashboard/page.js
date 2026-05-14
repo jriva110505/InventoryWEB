@@ -121,7 +121,7 @@ const salesIndicator = getSalesIndicator(sales)
   // COMPUTED
   const totalInventory = items.reduce((sum, i) => sum + Number(i.quantity || 0), 0)
   const lowStock = items.filter(
-  i => Number(i.quantity) >= 1 && Number(i.quantity) <= 10
+  i => Number(i.quantity) >= 1 && Number(i.quantity) <= 5
 ).length
   const outOfStock = items.filter(i => i.quantity === 0).length
   const activeDeliveries = tracking.filter(t => t.status !== 'Delivered').length
